@@ -1,0 +1,1656 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\title{A Market Segmentation and Purchase Drivers Process}
+\author{T. Evgeniou}
+\date{}
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={A Market Segmentation and Purchase Drivers Process},
+  pdfauthor={T. Evgeniou},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{adjustbox}
+
+\usepackage{tikz}
+\usetikzlibrary{backgrounds}
+\makeatletter
+
+\tikzset{%
+  fancy quotes/.style={
+    text width=\fq@width pt,
+    align=justify,
+    inner sep=1em,
+    anchor=north west,
+    minimum width=\linewidth,
+  },
+  fancy quotes width/.initial={.8\linewidth},
+  fancy quotes marks/.style={
+    scale=8,
+    text=white,
+    inner sep=0pt,
+  },
+  fancy quotes opening/.style={
+    fancy quotes marks,
+  },
+  fancy quotes closing/.style={
+    fancy quotes marks,
+  },
+  fancy quotes background/.style={
+    show background rectangle,
+    inner frame xsep=0pt,
+    background rectangle/.style={
+      fill=gray!4,
+      rounded corners,
+    },
+  }
+}
+
+\newenvironment{fancyquotes}[1][]{%
+\noindent
+\tikzpicture[fancy quotes background]
+\node[fancy quotes opening,anchor=north west] (fq@ul) at (0,0) {``};
+\tikz@scan@one@point\pgfutil@firstofone(fq@ul.east)
+\pgfmathsetmacro{\fq@width}{\linewidth - 2*\pgf@x}
+\node[fancy quotes,#1] (fq@txt) at (fq@ul.north west) \bgroup}
+{\egroup;
+\node[overlay,fancy quotes closing,anchor=east] at (fq@txt.south east) {''};
+\endtikzpicture}
+
+\makeatother
+
+\renewcommand{\familydefault}{\sfdefault} % sans serif
+\renewenvironment{quote}{\begin{fancyquotes}}{%
+    \end{fancyquotes}\ignorespacesafterend% as suggested above
+}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\begin{document}
+\maketitle
+
+\begin{quote}
+\textbf{IMPORTANT}: Please make sure you create a copy of this file with
+a customized name, so that your work (e.g.~answers to the questions) is
+not over-written when you pull the latest content from the course
+github. This is a \textbf{template process for market segmentation based
+on survey data}, using the
+\href{http://inseaddataanalytics.github.io/INSEADAnalytics/Boats-A-prerelease.pdf}{Boats
+cases A} and
+\href{http://inseaddataanalytics.github.io/INSEADAnalytics/Boats-B-prerelease.pdf}{B}.
+\end{quote}
+
+All material and code is available at the INSEAD Data Science for
+Business website and GitHub. Before starting, make sure you have pulled
+the \href{https://github.com/InseadDataAnalytics/INSEADAnalytics}{course
+files} on your GitHub repository. As always, you can use the
+\texttt{help} command in Rstudio to find out about any R function
+(e.g.~type \texttt{help(list.files)} to learn what the R function
+\texttt{list.files} does).
+
+\textbf{Note:} you can create an html file by running in your console
+the command
+rmarkdown::render(``CourseSessions/InClassProcess/MarketSegmentationProcessInClass.Rmd'')
+(see also a
+\href{https://github.com/InseadDataAnalytics/INSEADAnalytics/issues/75}{potential
+issue with plots})
+
+\clearpage
+
+\hypertarget{the-business-questions}{%
+\section{The Business Questions}\label{the-business-questions}}
+
+This process can be used as a (starting) template for projects like the
+one described in the
+\href{http://inseaddataanalytics.github.io/INSEADAnalytics/Boats-A-prerelease.pdf}{Boats
+cases A} and
+\href{http://inseaddataanalytics.github.io/INSEADAnalytics/Boats-B-prerelease.pdf}{B}.
+For example (but not only), in this case some of the business questions
+were:
+
+\begin{itemize}
+\item
+  What are the main purchase drivers of the customers (and prospects) of
+  this company?
+\item
+  Are there different market segments? Which ones? Do the purchase
+  drivers differ across segments?
+\item
+  What (possibly market segment specific) product development or brand
+  positioning strategy should the company follow in order to increase
+  its sales?
+\end{itemize}
+
+See for example some of the analysis of this case in these slides: part
+1 and part 2.
+
+\clearpage
+
+\hypertarget{the-process}{%
+\section{The Process}\label{the-process}}
+
+The ``high level'' process template is split in 3 parts, corresponding
+to the course sessions 7-8, 9-10, and an optional last part:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \emph{Part 1}: We use some of the survey questions (e.g.~in this case
+  the first 29 ``attitude'' questions) to find \textbf{key customer
+  descriptors} (``factors'') using \emph{dimensionality reduction}
+  techniques described in the
+  \href{http://inseaddataanalytics.github.io/INSEADAnalytics/CourseSessions/Sessions23/FactorAnalysisReading.html}{Dimensionality
+  Reduction} reading of Sessions 7-8.
+\item
+  \emph{Part 2}: We use the selected customer descriptors to
+  \textbf{segment the market} using \emph{cluster analysis} techniques
+  described in the
+  \href{http://inseaddataanalytics.github.io/INSEADAnalytics/CourseSessions/Sessions45/ClusterAnalysisReading.html}{Cluster
+  Analysis} reading of Sessions 9-10.
+\item
+  \emph{Part 3}: For the market segments we create, we will use
+  \emph{classification analysis} to classify people based on whether or
+  not they have purchased a product and find what are the \textbf{key
+  purchase drivers per segment}. For this part we will use
+  \href{http://inseaddataanalytics.github.io/INSEADAnalytics/CourseSessions/ClassificationProcessCreditCardDefault.html}{classification
+  analysis} techniques.
+\end{enumerate}
+
+Finally, we will use the results of this analysis to make business
+decisions, e.g.~about brand positioning, product development, etc.,
+depending on our market segments and key purchase drivers we find at the
+end of this process.
+
+\clearpage
+
+\hypertarget{the-data}{%
+\section{The Data}\label{the-data}}
+
+First we load the data to use (see the raw .Rmd file to change the data
+file as needed):
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Please ENTER the name of the file with the data used. The file should be a .csv with one row per observation (e.g. person) and one column per attribute. Do not add .csv at the end, make sure the data are numeric.}
+\NormalTok{datafile\_name }\OtherTok{=} \StringTok{"../Sessions23/data/Boats.csv"}
+
+\CommentTok{\# Please enter the minimum number below which you would like not to print {-} this makes the readability of the tables easier. Default values are either 10e6 (to print everything) or 0.5. Try both to see the difference.}
+\NormalTok{MIN\_VALUE }\OtherTok{=} \FloatTok{0.5}
+
+\CommentTok{\# Please enter the maximum number of observations to show in the report and slides. }
+\CommentTok{\# DEFAULT is 10. If the number is large the report may be slow.}
+\NormalTok{max\_data\_report }\OtherTok{=} \DecValTok{10}
+\end{Highlighting}
+\end{Shaded}
+
+\clearpage
+
+\hypertarget{part-1-key-customer-characteristics}{%
+\section{Part 1: Key Customer
+Characteristics}\label{part-1-key-customer-characteristics}}
+
+The code used here is along the lines of the code in the reading
+\href{https://github.com/InseadDataAnalytics/INSEADAnalytics/blob/master/CourseSessions/Sessions23/FactorAnalysisReading.Rmd}{FactorAnalysisReading.Rmd}.
+We follow the process described in the
+\href{http://inseaddataanalytics.github.io/INSEADAnalytics/CourseSessions/Sessions23/FactorAnalysisReading.html}{Dimensionality
+Reduction} reading.
+
+In this part we also become familiar with:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Some visualization tools;
+\item
+  Principal Component Analysis and Factor Analysis;
+\item
+  Introduction to machine learning methods.
+\end{enumerate}
+
+(All user inputs for this part should be selected in the code chunk in
+the raw .Rmd file)
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Please ENTER the original raw attributes to use. }
+\CommentTok{\# Please use numbers, not column names, e.g. c(1:5, 7, 8) uses columns 1,2,3,4,5,7,8}
+\NormalTok{factor\_attributes\_used }\OtherTok{=} \FunctionTok{c}\NormalTok{(}\DecValTok{2}\SpecialCharTok{:}\DecValTok{30}\NormalTok{)}
+
+\CommentTok{\# Please ENTER the selection criteria for the factors to use. }
+\CommentTok{\# Choices: "eigenvalue", "variance", "manual"}
+\NormalTok{factor\_selectionciterion }\OtherTok{=} \StringTok{"eigenvalue"}
+
+\CommentTok{\# Please ENTER the desired minumum variance explained }
+\CommentTok{\# (Only used in case "variance" is the factor selection criterion used). }
+\NormalTok{minimum\_variance\_explained }\OtherTok{=} \DecValTok{65}  \CommentTok{\# between 1 and 100}
+
+\CommentTok{\# Please ENTER the number of factors to use }
+\CommentTok{\# (Only used in case "manual" is the factor selection criterion used).}
+\NormalTok{manual\_numb\_factors\_used }\OtherTok{=} \DecValTok{15}
+
+\CommentTok{\# Please ENTER the rotation eventually used (e.g. "none", "varimax", "quatimax", "promax", "oblimin", "simplimax", and "cluster" {-} see help(principal)). Default is "varimax"}
+\NormalTok{rotation\_used }\OtherTok{=} \StringTok{"varimax"}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{steps-1-2-check-the-data}{%
+\subsection{Steps 1-2: Check the Data}\label{steps-1-2-check-the-data}}
+
+Start by some basic visual exploration of, say, a few data:
+
+\begin{center}
+\begin{longtable}{lrrrrrrrrrr}
+\toprule
+  & Obs.01 & Obs.02 & Obs.03 & Obs.04 & Obs.05 & Obs.06 & Obs.07 & Obs.08 & Obs.09 & Obs.10\\
+\midrule
+Q1.1 & 5 & 3 & 3 & 5 & 4 & 4 & 4 & 4 & 4 & 2\\
+Q1.2 & 1 & 2 & 1 & 2 & 2 & 2 & 3 & 3 & 3 & 5\\
+Q1.3 & 5 & 4 & 4 & 3 & 4 & 2 & 4 & 4 & 4 & 3\\
+Q1.4 & 5 & 4 & 4 & 4 & 5 & 4 & 4 & 4 & 4 & 2\\
+Q1.5 & 5 & 4 & 5 & 5 & 5 & 5 & 5 & 4 & 4 & 1\\
+\addlinespace
+Q1.6 & 5 & 4 & 4 & 5 & 4 & 5 & 5 & 5 & 4 & 3\\
+Q1.7 & 5 & 5 & 4 & 3 & 5 & 4 & 5 & 4 & 4 & 5\\
+Q1.8 & 3 & 3 & 2 & 3 & 4 & 3 & 5 & 4 & 3 & 4\\
+Q1.9 & 5 & 4 & 4 & 3 & 5 & 2 & 3 & 5 & 4 & 3\\
+Q1.10 & 4 & 4 & 3 & 4 & 4 & 4 & 1 & 3 & 3 & 4\\
+\addlinespace
+Q1.11 & 2 & 3 & 2 & 4 & 5 & 2 & 5 & 4 & 5 & 1\\
+Q1.12 & 1 & 2 & 2 & 2 & 1 & 2 & 3 & 1 & 1 & 3\\
+Q1.13 & 5 & 4 & 5 & 5 & 5 & 3 & 4 & 4 & 4 & 1\\
+Q1.14 & 5 & 4 & 5 & 5 & 4 & 4 & 4 & 4 & 4 & 4\\
+Q1.15 & 5 & 5 & 5 & 5 & 5 & 4 & 5 & 3 & 5 & 3\\
+\addlinespace
+Q1.16 & 4 & 3 & 4 & 4 & 5 & 4 & 4 & 3 & 4 & 2\\
+Q1.17 & 4 & 3 & 4 & 3 & 5 & 4 & 5 & 4 & 4 & 3\\
+Q1.18 & 5 & 5 & 4 & 5 & 5 & 4 & 4 & 4 & 4 & 5\\
+Q1.19 & 5 & 4 & 4 & 4 & 5 & 5 & 5 & 4 & 4 & 5\\
+Q1.20 & 4 & 3 & 3 & 3 & 4 & 3 & 4 & 3 & 4 & 4\\
+\addlinespace
+Q1.21 & 5 & 4 & 3 & 5 & 4 & 5 & 5 & 4 & 4 & 5\\
+Q1.22 & 5 & 4 & 5 & 4 & 4 & 5 & 5 & 4 & 4 & 4\\
+Q1.23 & 5 & 3 & 4 & 5 & 5 & 4 & 5 & 3 & 4 & 5\\
+Q1.24 & 5 & 4 & 4 & 3 & 4 & 5 & 5 & 5 & 4 & 4\\
+Q1.25 & 5 & 4 & 4 & 5 & 4 & 4 & 5 & 4 & 4 & 5\\
+\addlinespace
+Q1.26 & 5 & 4 & 5 & 4 & 5 & 4 & 5 & 5 & 5 & 4\\
+Q1.27 & 3 & 4 & 3 & 3 & 4 & 4 & 5 & 3 & 5 & 4\\
+Q1.28 & 4 & 4 & 3 & 3 & 4 & 4 & 5 & 3 & 5 & 4\\
+Q1.29 & 5 & 4 & 4 & 5 & 4 & 4 & 5 & 4 & 3 & 5\\
+\bottomrule
+\end{longtable}\end{center}
+
+The data we use here have the following descriptive statistics:
+
+\begin{center}
+\begin{longtable}{lrrrrrrr}
+\toprule
+  & min & 25 percent & median & mean & 75 percent & max & std\\
+\midrule
+Q1.1 & 1 & 4 & 4 & 4.03 & 5 & 5 & 0.82\\
+Q1.2 & 1 & 2 & 3 & 2.89 & 4 & 5 & 1.01\\
+Q1.3 & 1 & 2 & 3 & 3.12 & 4 & 5 & 1.02\\
+Q1.4 & 1 & 3 & 4 & 3.89 & 4 & 5 & 0.82\\
+Q1.5 & 1 & 3 & 4 & 3.55 & 4 & 5 & 0.93\\
+\addlinespace
+Q1.6 & 1 & 4 & 4 & 3.95 & 4 & 5 & 0.82\\
+Q1.7 & 1 & 3 & 4 & 3.67 & 4 & 5 & 0.90\\
+Q1.8 & 1 & 3 & 4 & 3.74 & 4 & 5 & 0.82\\
+Q1.9 & 1 & 2 & 3 & 2.89 & 4 & 5 & 1.08\\
+Q1.10 & 1 & 3 & 3 & 3.37 & 4 & 5 & 0.93\\
+\addlinespace
+Q1.11 & 1 & 3 & 4 & 3.46 & 4 & 5 & 1.15\\
+Q1.12 & 1 & 2 & 3 & 2.86 & 4 & 5 & 1.01\\
+Q1.13 & 1 & 2 & 3 & 3.02 & 4 & 5 & 0.98\\
+Q1.14 & 1 & 3 & 3 & 3.25 & 4 & 5 & 0.97\\
+Q1.15 & 1 & 3 & 4 & 3.63 & 4 & 5 & 0.89\\
+\addlinespace
+Q1.16 & 1 & 2 & 3 & 3.10 & 4 & 5 & 1.05\\
+Q1.17 & 1 & 2 & 3 & 3.08 & 4 & 5 & 0.98\\
+Q1.18 & 1 & 4 & 4 & 4.12 & 5 & 5 & 0.74\\
+Q1.19 & 1 & 4 & 4 & 4.20 & 5 & 5 & 0.72\\
+Q1.20 & 1 & 2 & 3 & 3.16 & 4 & 5 & 0.97\\
+\addlinespace
+Q1.21 & 1 & 4 & 4 & 4.25 & 5 & 5 & 0.73\\
+Q1.22 & 1 & 4 & 4 & 4.01 & 4 & 5 & 0.74\\
+Q1.23 & 1 & 3 & 4 & 3.56 & 4 & 5 & 1.02\\
+Q1.24 & 1 & 4 & 4 & 4.11 & 5 & 5 & 0.76\\
+Q1.25 & 1 & 3 & 4 & 3.79 & 4 & 5 & 0.91\\
+\addlinespace
+Q1.26 & 1 & 2 & 3 & 2.95 & 4 & 5 & 1.05\\
+Q1.27 & 1 & 2 & 3 & 3.16 & 4 & 5 & 1.05\\
+Q1.28 & 1 & 3 & 3 & 3.31 & 4 & 5 & 0.98\\
+Q1.29 & 1 & 4 & 4 & 4.03 & 4 & 5 & 0.73\\
+\bottomrule
+\end{longtable}\end{center}
+
+\hypertarget{step-3-check-correlations}{%
+\subsection{Step 3: Check
+Correlations}\label{step-3-check-correlations}}
+
+This is the correlation matrix of the customer responses to the 29
+attitude questions - which are the only questions that we will use for
+the segmentation (see the case):
+
+\setkeys{Gin}{height=\textheight}\adjustbox{width=\linewidth}{
+\begin{tabular}{lrrrrrrrrrrrrrrrrrrrrrrrrrrrrr}
+\toprule
+  & Q1.1 & Q1.2 & Q1.3 & Q1.4 & Q1.5 & Q1.6 & Q1.7 & Q1.8 & Q1.9 & Q1.10 & Q1.11 & Q1.12 & Q1.13 & Q1.14 & Q1.15 & Q1.16 & Q1.17 & Q1.18 & Q1.19 & Q1.20 & Q1.21 & Q1.22 & Q1.23 & Q1.24 & Q1.25 & Q1.26 & Q1.27 & Q1.28 & Q1.29\\
+\midrule
+Q1.1 & 1.00 & 0.01 & 0.11 & 0.20 & 0.18 & 0.27 & 0.18 & 0.09 & 0.08 & 0.11 & 0.14 & -0.05 & 0.12 & 0.18 & 0.26 & 0.16 & 0.15 & 0.25 & 0.27 & 0.19 & 0.24 & 0.23 & 0.19 & 0.21 & 0.23 & 0.10 & 0.13 & 0.18 & 0.20\\
+Q1.2 & 0.01 & 1.00 & -0.03 & -0.21 & -0.21 & -0.04 & 0.02 & 0.20 & 0.09 & 0.16 & 0.04 & 0.37 & 0.01 & -0.03 & -0.08 & -0.02 & 0.04 & -0.04 & -0.04 & 0.05 & -0.10 & -0.08 & 0.00 & -0.08 & 0.01 & 0.07 & 0.05 & 0.02 & -0.03\\
+Q1.3 & 0.11 & -0.03 & 1.00 & 0.26 & 0.40 & 0.34 & 0.44 & -0.05 & 0.58 & 0.14 & 0.10 & -0.09 & 0.48 & 0.46 & 0.38 & 0.39 & 0.38 & 0.24 & 0.14 & 0.39 & 0.18 & 0.28 & 0.34 & 0.23 & 0.36 & 0.47 & 0.40 & 0.43 & 0.17\\
+Q1.4 & 0.20 & -0.21 & 0.26 & 1.00 & 0.37 & 0.20 & 0.18 & 0.00 & 0.17 & 0.10 & 0.06 & -0.16 & 0.27 & 0.29 & 0.30 & 0.18 & 0.17 & 0.18 & 0.19 & 0.18 & 0.18 & 0.23 & 0.16 & 0.23 & 0.22 & 0.19 & 0.17 & 0.21 & 0.19\\
+Q1.5 & 0.18 & -0.21 & 0.40 & 0.37 & 1.00 & 0.29 & 0.29 & -0.03 & 0.33 & 0.14 & 0.07 & -0.17 & 0.45 & 0.46 & 0.42 & 0.36 & 0.32 & 0.23 & 0.18 & 0.32 & 0.19 & 0.27 & 0.29 & 0.25 & 0.29 & 0.34 & 0.29 & 0.33 & 0.18\\
+\addlinespace
+Q1.6 & 0.27 & -0.04 & 0.34 & 0.20 & 0.29 & 1.00 & 0.55 & 0.04 & 0.35 & 0.12 & 0.15 & -0.12 & 0.29 & 0.31 & 0.31 & 0.27 & 0.24 & 0.44 & 0.36 & 0.35 & 0.42 & 0.41 & 0.32 & 0.37 & 0.42 & 0.31 & 0.34 & 0.39 & 0.27\\
+Q1.7 & 0.18 & 0.02 & 0.44 & 0.18 & 0.29 & 0.55 & 1.00 & -0.01 & 0.49 & 0.12 & 0.12 & -0.11 & 0.35 & 0.36 & 0.34 & 0.31 & 0.29 & 0.40 & 0.28 & 0.36 & 0.33 & 0.39 & 0.30 & 0.33 & 0.42 & 0.39 & 0.37 & 0.40 & 0.24\\
+Q1.8 & 0.09 & 0.20 & -0.05 & 0.00 & -0.03 & 0.04 & -0.01 & 1.00 & -0.09 & 0.09 & 0.14 & 0.24 & -0.05 & -0.02 & 0.06 & 0.02 & 0.05 & 0.07 & 0.09 & 0.04 & 0.06 & 0.05 & 0.10 & 0.02 & 0.10 & -0.04 & 0.03 & 0.05 & 0.10\\
+Q1.9 & 0.08 & 0.09 & 0.58 & 0.17 & 0.33 & 0.35 & 0.49 & -0.09 & 1.00 & 0.14 & 0.06 & -0.04 & 0.48 & 0.43 & 0.33 & 0.39 & 0.37 & 0.22 & 0.07 & 0.37 & 0.14 & 0.23 & 0.29 & 0.23 & 0.32 & 0.50 & 0.40 & 0.40 & 0.11\\
+Q1.10 & 0.11 & 0.16 & 0.14 & 0.10 & 0.14 & 0.12 & 0.12 & 0.09 & 0.14 & 1.00 & -0.09 & 0.12 & 0.16 & 0.11 & 0.11 & -0.03 & -0.03 & 0.14 & 0.09 & 0.10 & 0.08 & 0.09 & 0.07 & 0.13 & 0.08 & 0.13 & 0.08 & 0.07 & 0.05\\
+\addlinespace
+Q1.11 & 0.14 & 0.04 & 0.10 & 0.06 & 0.07 & 0.15 & 0.12 & 0.14 & 0.06 & -0.09 & 1.00 & 0.09 & 0.08 & 0.13 & 0.20 & 0.32 & 0.31 & 0.11 & 0.12 & 0.25 & 0.13 & 0.17 & 0.19 & 0.08 & 0.25 & 0.09 & 0.16 & 0.18 & 0.17\\
+Q1.12 & -0.05 & 0.37 & -0.09 & -0.16 & -0.17 & -0.12 & -0.11 & 0.24 & -0.04 & 0.12 & 0.09 & 1.00 & -0.11 & -0.17 & -0.17 & -0.02 & 0.02 & -0.12 & -0.09 & 0.01 & -0.17 & -0.11 & -0.03 & -0.17 & -0.05 & -0.06 & 0.00 & -0.01 & -0.04\\
+Q1.13 & 0.12 & 0.01 & 0.48 & 0.27 & 0.45 & 0.29 & 0.35 & -0.05 & 0.48 & 0.16 & 0.08 & -0.11 & 1.00 & 0.64 & 0.46 & 0.43 & 0.43 & 0.20 & 0.11 & 0.39 & 0.14 & 0.23 & 0.32 & 0.20 & 0.32 & 0.48 & 0.40 & 0.40 & 0.19\\
+Q1.14 & 0.18 & -0.03 & 0.46 & 0.29 & 0.46 & 0.31 & 0.36 & -0.02 & 0.43 & 0.11 & 0.13 & -0.17 & 0.64 & 1.00 & 0.50 & 0.43 & 0.40 & 0.25 & 0.18 & 0.41 & 0.21 & 0.29 & 0.36 & 0.21 & 0.35 & 0.46 & 0.39 & 0.40 & 0.21\\
+Q1.15 & 0.26 & -0.08 & 0.38 & 0.30 & 0.42 & 0.31 & 0.34 & 0.06 & 0.33 & 0.11 & 0.20 & -0.17 & 0.46 & 0.50 & 1.00 & 0.41 & 0.39 & 0.32 & 0.26 & 0.41 & 0.21 & 0.33 & 0.35 & 0.27 & 0.43 & 0.37 & 0.35 & 0.38 & 0.24\\
+\addlinespace
+Q1.16 & 0.16 & -0.02 & 0.39 & 0.18 & 0.36 & 0.27 & 0.31 & 0.02 & 0.39 & -0.03 & 0.32 & -0.02 & 0.43 & 0.43 & 0.41 & 1.00 & 0.63 & 0.20 & 0.14 & 0.52 & 0.16 & 0.30 & 0.40 & 0.19 & 0.39 & 0.40 & 0.48 & 0.50 & 0.20\\
+Q1.17 & 0.15 & 0.04 & 0.38 & 0.17 & 0.32 & 0.24 & 0.29 & 0.05 & 0.37 & -0.03 & 0.31 & 0.02 & 0.43 & 0.40 & 0.39 & 0.63 & 1.00 & 0.17 & 0.12 & 0.45 & 0.13 & 0.26 & 0.36 & 0.15 & 0.36 & 0.40 & 0.44 & 0.46 & 0.21\\
+Q1.18 & 0.25 & -0.04 & 0.24 & 0.18 & 0.23 & 0.44 & 0.40 & 0.07 & 0.22 & 0.14 & 0.11 & -0.12 & 0.20 & 0.25 & 0.32 & 0.20 & 0.17 & 1.00 & 0.49 & 0.28 & 0.47 & 0.44 & 0.29 & 0.42 & 0.37 & 0.24 & 0.25 & 0.31 & 0.30\\
+Q1.19 & 0.27 & -0.04 & 0.14 & 0.19 & 0.18 & 0.36 & 0.28 & 0.09 & 0.07 & 0.09 & 0.12 & -0.09 & 0.11 & 0.18 & 0.26 & 0.14 & 0.12 & 0.49 & 1.00 & 0.21 & 0.44 & 0.38 & 0.24 & 0.37 & 0.32 & 0.14 & 0.18 & 0.23 & 0.28\\
+Q1.20 & 0.19 & 0.05 & 0.39 & 0.18 & 0.32 & 0.35 & 0.36 & 0.04 & 0.37 & 0.10 & 0.25 & 0.01 & 0.39 & 0.41 & 0.41 & 0.52 & 0.45 & 0.28 & 0.21 & 1.00 & 0.23 & 0.33 & 0.40 & 0.24 & 0.41 & 0.40 & 0.50 & 0.52 & 0.25\\
+\addlinespace
+Q1.21 & 0.24 & -0.10 & 0.18 & 0.18 & 0.19 & 0.42 & 0.33 & 0.06 & 0.14 & 0.08 & 0.13 & -0.17 & 0.14 & 0.21 & 0.21 & 0.16 & 0.13 & 0.47 & 0.44 & 0.23 & 1.00 & 0.42 & 0.24 & 0.42 & 0.30 & 0.15 & 0.24 & 0.26 & 0.29\\
+Q1.22 & 0.23 & -0.08 & 0.28 & 0.23 & 0.27 & 0.41 & 0.39 & 0.05 & 0.23 & 0.09 & 0.17 & -0.11 & 0.23 & 0.29 & 0.33 & 0.30 & 0.26 & 0.44 & 0.38 & 0.33 & 0.42 & 1.00 & 0.34 & 0.38 & 0.37 & 0.23 & 0.35 & 0.38 & 0.34\\
+Q1.23 & 0.19 & 0.00 & 0.34 & 0.16 & 0.29 & 0.32 & 0.30 & 0.10 & 0.29 & 0.07 & 0.19 & -0.03 & 0.32 & 0.36 & 0.35 & 0.40 & 0.36 & 0.29 & 0.24 & 0.40 & 0.24 & 0.34 & 1.00 & 0.23 & 0.32 & 0.33 & 0.39 & 0.44 & 0.23\\
+Q1.24 & 0.21 & -0.08 & 0.23 & 0.23 & 0.25 & 0.37 & 0.33 & 0.02 & 0.23 & 0.13 & 0.08 & -0.17 & 0.20 & 0.21 & 0.27 & 0.19 & 0.15 & 0.42 & 0.37 & 0.24 & 0.42 & 0.38 & 0.23 & 1.00 & 0.31 & 0.21 & 0.24 & 0.25 & 0.27\\
+Q1.25 & 0.23 & 0.01 & 0.36 & 0.22 & 0.29 & 0.42 & 0.42 & 0.10 & 0.32 & 0.08 & 0.25 & -0.05 & 0.32 & 0.35 & 0.43 & 0.39 & 0.36 & 0.37 & 0.32 & 0.41 & 0.30 & 0.37 & 0.32 & 0.31 & 1.00 & 0.34 & 0.35 & 0.40 & 0.23\\
+\addlinespace
+Q1.26 & 0.10 & 0.07 & 0.47 & 0.19 & 0.34 & 0.31 & 0.39 & -0.04 & 0.50 & 0.13 & 0.09 & -0.06 & 0.48 & 0.46 & 0.37 & 0.40 & 0.40 & 0.24 & 0.14 & 0.40 & 0.15 & 0.23 & 0.33 & 0.21 & 0.34 & 1.00 & 0.45 & 0.47 & 0.15\\
+Q1.27 & 0.13 & 0.05 & 0.40 & 0.17 & 0.29 & 0.34 & 0.37 & 0.03 & 0.40 & 0.08 & 0.16 & 0.00 & 0.40 & 0.39 & 0.35 & 0.48 & 0.44 & 0.25 & 0.18 & 0.50 & 0.24 & 0.35 & 0.39 & 0.24 & 0.35 & 0.45 & 1.00 & 0.62 & 0.23\\
+Q1.28 & 0.18 & 0.02 & 0.43 & 0.21 & 0.33 & 0.39 & 0.40 & 0.05 & 0.40 & 0.07 & 0.18 & -0.01 & 0.40 & 0.40 & 0.38 & 0.50 & 0.46 & 0.31 & 0.23 & 0.52 & 0.26 & 0.38 & 0.44 & 0.25 & 0.40 & 0.47 & 0.62 & 1.00 & 0.26\\
+Q1.29 & 0.20 & -0.03 & 0.17 & 0.19 & 0.18 & 0.27 & 0.24 & 0.10 & 0.11 & 0.05 & 0.17 & -0.04 & 0.19 & 0.21 & 0.24 & 0.20 & 0.21 & 0.30 & 0.28 & 0.25 & 0.29 & 0.34 & 0.23 & 0.27 & 0.23 & 0.15 & 0.23 & 0.26 & 1.00\\
+\bottomrule
+\end{tabular}}\setkeys{Gin}{height=\maxheight}
+
+\textbf{Questions}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Do you see any high correlations between the responses? Do they make
+  sense?
+\item
+  What do these correlations imply?
+\end{enumerate}
+
+\textbf{Answers:}
+
+\begin{itemize}
+\tightlist
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\end{itemize}
+
+\hypertarget{step-4-choose-number-of-factors}{%
+\subsection{Step 4: Choose number of
+factors}\label{step-4-choose-number-of-factors}}
+
+Clearly the survey asked many redundant questions (can you think some
+reasons why?), so we may be able to actually ``group'' these 29 attitude
+questions into only a few ``key factors''. This not only will simplify
+the data, but will also greatly facilitate our understanding of the
+customers.
+
+To do so, we use methods called
+\href{https://en.wikipedia.org/wiki/Principal_component_analysis}{Principal
+Component Analysis} and
+\href{https://en.wikipedia.org/wiki/Factor_analysis}{factor analysis} as
+also discussed in the
+\href{http://inseaddataanalytics.github.io/INSEADAnalytics/CourseSessions/Sessions23/FactorAnalysisReading.html}{Dimensionality
+Reduction readings}. We can use two different R commands for this (they
+make slightly different information easily available as output): the
+command \texttt{principal} (check \texttt{help(principal)} from R
+package \href{http://personality-project.org/r/psych/}{psych}), and the
+command \texttt{PCA} from R package
+\href{http://factominer.free.fr}{FactoMineR} - there are more packages
+and commands for this, as these methods are very widely used.
+
+Let's look at the \textbf{variance explained} as well as the
+\textbf{eigenvalues} (see session readings):
+
+\begin{center}
+\begin{longtable}{lrrr}
+\toprule
+  & Eigenvalue & Pct of explained variance & Cumulative pct of explained variance\\
+\midrule
+Component 1 & 8.43 & 29.08 & 29.08\\
+Component 2 & 2.33 & 8.05 & 37.12\\
+Component 3 & 1.86 & 6.42 & 43.55\\
+Component 4 & 1.46 & 5.03 & 48.57\\
+Component 5 & 1.21 & 4.16 & 52.74\\
+\addlinespace
+Component 6 & 0.90 & 3.10 & 55.84\\
+Component 7 & 0.82 & 2.82 & 58.65\\
+Component 8 & 0.79 & 2.71 & 61.36\\
+Component 9 & 0.78 & 2.69 & 64.05\\
+Component 10 & 0.74 & 2.56 & 66.61\\
+\addlinespace
+Component 11 & 0.69 & 2.37 & 68.98\\
+Component 12 & 0.65 & 2.25 & 71.23\\
+Component 13 & 0.65 & 2.23 & 73.47\\
+Component 14 & 0.62 & 2.13 & 75.60\\
+Component 15 & 0.61 & 2.10 & 77.70\\
+\addlinespace
+Component 16 & 0.58 & 1.99 & 79.69\\
+Component 17 & 0.56 & 1.94 & 81.62\\
+Component 18 & 0.54 & 1.85 & 83.47\\
+Component 19 & 0.52 & 1.81 & 85.28\\
+Component 20 & 0.51 & 1.76 & 87.04\\
+\addlinespace
+Component 21 & 0.50 & 1.72 & 88.77\\
+Component 22 & 0.49 & 1.69 & 90.45\\
+Component 23 & 0.46 & 1.59 & 92.04\\
+Component 24 & 0.46 & 1.57 & 93.61\\
+Component 25 & 0.41 & 1.42 & 95.03\\
+\addlinespace
+Component 26 & 0.38 & 1.32 & 96.36\\
+Component 27 & 0.37 & 1.28 & 97.63\\
+Component 28 & 0.35 & 1.22 & 98.85\\
+Component 29 & 0.33 & 1.15 & 100.00\\
+\bottomrule
+\end{longtable}\end{center}
+
+\begin{center}\includegraphics{MarketSegmentationProcessInClass_files/figure-latex/unnamed-chunk-9-1} \end{center}
+
+\textbf{Questions:}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Can you explain what this table and the plot are? What do they
+  indicate? What can we learn from these?
+\item
+  Why does the plot have this specific shape? Could the plotted line be
+  increasing?
+\item
+  What characteristics of these results would we prefer to see? Why?
+\end{enumerate}
+
+\textbf{Answers}
+
+\begin{itemize}
+\tightlist
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\end{itemize}
+
+\hypertarget{step-5-interpret-the-factors}{%
+\subsection{Step 5: Interpret the
+factors}\label{step-5-interpret-the-factors}}
+
+Let's now see how the ``top factors'' look like.
+
+To better visualize them, we will use what is called a ``rotation''.
+There are many rotation methods. In this case we selected the varimax
+rotation. For our data, the 5 selected factors look as follows after
+this rotation:
+
+\setkeys{Gin}{height=\textheight}\adjustbox{width=\linewidth}{
+\begin{tabular}{lrrrrr}
+\toprule
+  & Comp.1 & Comp.2 & Comp.3 & Comp.4 & Comp.5\\
+\midrule
+Q1.9 & 0.78 & 0.12 & 0.00 & -0.12 & -0.01\\
+Q1.26 & 0.72 & 0.11 & 0.10 & 0.01 & 0.02\\
+Q1.3 & 0.71 & 0.15 & 0.17 & -0.04 & -0.06\\
+Q1.13 & 0.68 & 0.02 & 0.40 & 0.01 & -0.03\\
+Q1.27 & 0.63 & 0.24 & -0.02 & 0.28 & 0.05\\
+\addlinespace
+Q1.28 & 0.62 & 0.30 & 0.03 & 0.31 & 0.04\\
+Q1.14 & 0.61 & 0.11 & 0.44 & 0.09 & -0.07\\
+Q1.16 & 0.57 & 0.09 & 0.14 & 0.55 & -0.03\\
+Q1.7 & 0.56 & 0.50 & -0.05 & -0.07 & -0.03\\
+Q1.17 & 0.55 & 0.04 & 0.15 & 0.54 & 0.03\\
+\addlinespace
+Q1.20 & 0.55 & 0.25 & 0.11 & 0.36 & 0.10\\
+Q1.5 & 0.42 & 0.14 & 0.58 & 0.03 & -0.18\\
+Q1.15 & 0.42 & 0.24 & 0.50 & 0.22 & -0.03\\
+Q1.23 & 0.41 & 0.29 & 0.15 & 0.31 & 0.07\\
+Q1.25 & 0.39 & 0.43 & 0.15 & 0.25 & 0.06\\
+\addlinespace
+Q1.6 & 0.38 & 0.62 & 0.02 & 0.00 & -0.02\\
+Q1.22 & 0.24 & 0.62 & 0.11 & 0.18 & -0.05\\
+Q1.18 & 0.18 & 0.73 & 0.09 & 0.00 & 0.01\\
+Q1.10 & 0.17 & 0.14 & 0.31 & -0.48 & 0.47\\
+Q1.24 & 0.17 & 0.63 & 0.12 & -0.06 & -0.09\\
+\addlinespace
+Q1.2 & 0.15 & -0.07 & -0.27 & -0.07 & 0.71\\
+Q1.4 & 0.13 & 0.17 & 0.65 & 0.01 & -0.15\\
+Q1.29 & 0.08 & 0.45 & 0.19 & 0.24 & 0.06\\
+Q1.21 & 0.07 & 0.73 & 0.04 & 0.05 & -0.10\\
+Q1.11 & 0.04 & 0.13 & 0.06 & 0.66 & 0.14\\
+\addlinespace
+Q1.19 & 0.00 & 0.70 & 0.15 & 0.07 & 0.04\\
+Q1.1 & -0.02 & 0.37 & 0.41 & 0.14 & 0.16\\
+Q1.12 & -0.02 & -0.17 & -0.18 & 0.09 & 0.70\\
+Q1.8 & -0.18 & 0.13 & 0.19 & 0.23 & 0.59\\
+\bottomrule
+\end{tabular}}\setkeys{Gin}{height=\maxheight}
+
+To better visualize and interpret the factors we often ``suppress''
+loadings with small values, e.g.~with absolute values smaller than 0.5.
+In this case our factors look as follows after suppressing the small
+numbers:
+
+\setkeys{Gin}{height=\textheight}\adjustbox{width=\linewidth}{
+\begin{tabular}{lrrrrr}
+\toprule
+  & Comp.1 & Comp.2 & Comp.3 & Comp.4 & Comp.5\\
+\midrule
+Q1.9 & 0.78 &  &  &  & \\
+Q1.26 & 0.72 &  &  &  & \\
+Q1.3 & 0.71 &  &  &  & \\
+Q1.13 & 0.68 &  &  &  & \\
+Q1.27 & 0.63 &  &  &  & \\
+\addlinespace
+Q1.28 & 0.62 &  &  &  & \\
+Q1.14 & 0.61 &  &  &  & \\
+Q1.16 & 0.57 &  &  & 0.55 & \\
+Q1.7 & 0.56 & 0.50 &  &  & \\
+Q1.17 & 0.55 &  &  & 0.54 & \\
+\addlinespace
+Q1.20 & 0.55 &  &  &  & \\
+Q1.5 &  &  & 0.58 &  & \\
+Q1.15 &  &  & 0.50 &  & \\
+Q1.23 &  &  &  &  & \\
+Q1.25 &  &  &  &  & \\
+\addlinespace
+Q1.6 &  & 0.62 &  &  & \\
+Q1.22 &  & 0.62 &  &  & \\
+Q1.18 &  & 0.73 &  &  & \\
+Q1.10 &  &  &  &  & \\
+Q1.24 &  & 0.63 &  &  & \\
+\addlinespace
+Q1.2 &  &  &  &  & 0.71\\
+Q1.4 &  &  & 0.65 &  & \\
+Q1.29 &  &  &  &  & \\
+Q1.21 &  & 0.73 &  &  & \\
+Q1.11 &  &  &  & 0.66 & \\
+\addlinespace
+Q1.19 &  & 0.70 &  &  & \\
+Q1.1 &  &  &  &  & \\
+Q1.12 &  &  &  &  & 0.70\\
+Q1.8 &  &  &  &  & 0.59\\
+\bottomrule
+\end{tabular}}\setkeys{Gin}{height=\maxheight}
+
+\textbf{Questions}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  What do the first couple of factors mean? Do they make business sense?
+\item
+  How many factors should we choose for this data/customer base? Please
+  try a few and explain your final choice based on a) statistical
+  arguments, b) on interpretation arguments, c) on business arguments
+  (\textbf{you need to consider all three types of arguments})
+\item
+  How would you interpret the factors you selected?
+\item
+  What lessons about data science do you learn when doing this analysis?
+  Please comment.
+\end{enumerate}
+
+\textbf{Answers}
+
+\begin{itemize}
+\tightlist
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\end{itemize}
+
+\hypertarget{step-6-save-factor-scores}{%
+\subsection{Step 6: Save factor
+scores}\label{step-6-save-factor-scores}}
+
+We can now either replace all initial variables used in this part with
+the factor scores, or just select one of the initial variables for each
+of the selected factors in order to represent that factor. Here is how
+the factor scores are for the first few respondents:
+
+\setkeys{Gin}{height=\textheight}\adjustbox{width=\linewidth}{
+\begin{tabular}{lrrrrrrrrrr}
+\toprule
+  & Obs.01 & Obs.02 & Obs.03 & Obs.04 & Obs.05 & Obs.06 & Obs.07 & Obs.08 & Obs.09 & Obs.10\\
+\midrule
+DV (Factor) 1 & 1.63 & 1.39 & 1.81 & 0.39 & 1.67 & 0.26 & 1.06 & 1.19 & 1.80 & 0.85\\
+DV (Factor) 2 & 1.21 & -0.09 & -1.19 & 0.08 & -0.20 & 0.97 & 0.97 & -0.05 & -0.76 & 1.37\\
+DV (Factor) 3 & 1.76 & 0.04 & 0.95 & 2.06 & 1.49 & 0.43 & -0.17 & -0.12 & -0.15 & -3.42\\
+DV (Factor) 4 & -1.09 & -1.19 & -0.68 & 0.19 & 0.62 & -0.25 & 2.45 & -0.67 & 0.77 & -0.94\\
+DV (Factor) 5 & -1.67 & -1.01 & -2.26 & -0.58 & -0.74 & -1.08 & -0.24 & -0.82 & -1.11 & 1.23\\
+\bottomrule
+\end{tabular}}\setkeys{Gin}{height=\maxheight}
+
+\textbf{Questions}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Can you describe some of the people using the new derived variables
+  (factor scores)?
+\item
+  Which of the 29 initial variables would you select to represent each
+  of the factors you selected?
+\end{enumerate}
+
+\textbf{Answers}
+
+\begin{itemize}
+\tightlist
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\end{itemize}
+
+\clearpage
+
+\hypertarget{part-2-customer-segmentation}{%
+\section{Part 2: Customer
+Segmentation}\label{part-2-customer-segmentation}}
+
+The code used here is along the lines of the code in the reading
+\href{https://github.com/InseadDataAnalytics/INSEADAnalytics/blob/master/CourseSessions/Sessions45/ClusterAnalysisReading.Rmd}{ClusterAnalysisReading.Rmd}.
+We follow the process described in the
+\href{http://inseaddataanalytics.github.io/INSEADAnalytics/CourseSessions/Sessions45/ClusterAnalysisReading.html}{Cluster
+Analysis} reading.
+
+In this part we also become familiar with:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Some clustering Methods;
+\item
+  How these tools can be used in practice.
+\end{enumerate}
+
+A key family of methods used for segmentation is what is called
+\textbf{clustering methods}. This is a very important problem in
+statistics and \textbf{machine learning}, used in all sorts of
+applications such as in
+\href{http://www.cs.umd.edu/~samir/498/Amazon-Recommendations.pdf}{Amazon's
+pioneer work on recommender systems}. There are many \emph{mathematical
+methods} for clustering. We will use two very standard methods,
+\textbf{hierarchical clustering} and \textbf{k-means}. While the
+``math'' behind all these methods can be complex, the R functions used
+are relatively simple to use, as we will see.
+
+(All user inputs for this part should be selected in the code chunk in
+the raw .Rmd file)
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Please ENTER then original raw attributes to use for the segmentation (the "segmentation attributes")}
+\CommentTok{\# Please use numbers, not column names, e.g. c(1:5, 7, 8) uses columns 1,2,3,4,5,7,8}
+\NormalTok{segmentation\_attributes\_used }\OtherTok{=} \FunctionTok{c}\NormalTok{(}\DecValTok{28}\NormalTok{,}\DecValTok{25}\NormalTok{,}\DecValTok{27}\NormalTok{,}\DecValTok{14}\NormalTok{,}\DecValTok{20}\NormalTok{,}\DecValTok{8}\NormalTok{,}\DecValTok{3}\NormalTok{,}\DecValTok{12}\NormalTok{,}\DecValTok{13}\NormalTok{,}\DecValTok{5}\NormalTok{,}\DecValTok{9}\NormalTok{,}\DecValTok{11}\NormalTok{,}\DecValTok{2}\NormalTok{,}\DecValTok{30}\NormalTok{,}\DecValTok{24}\NormalTok{) }\CommentTok{\#c(10,19,5,12,3) }
+
+\CommentTok{\# Please ENTER then original raw attributes to use for the profiling of the segments (the "profiling attributes")}
+\CommentTok{\# Please use numbers, not column names, e.g. c(1:5, 7, 8) uses columns 1,2,3,4,5,7,8}
+\NormalTok{profile\_attributes\_used }\OtherTok{=} \FunctionTok{c}\NormalTok{(}\DecValTok{2}\SpecialCharTok{:}\DecValTok{82}\NormalTok{) }
+
+\CommentTok{\# Please ENTER the number of clusters to eventually use for this report}
+\NormalTok{numb\_clusters\_used }\OtherTok{=} \DecValTok{7} \CommentTok{\# for boats possibly use 5, for Mall\_Visits use 3}
+
+\CommentTok{\# Please enter the method to use for the segmentation:}
+\NormalTok{profile\_with }\OtherTok{=} \StringTok{"hclust"} \CommentTok{\#  "hclust" or "kmeans"}
+
+\CommentTok{\# Please ENTER the distance metric eventually used for the clustering in case of hierarchical clustering }
+\CommentTok{\# (e.g. "euclidean", "maximum", "manhattan", "canberra", "binary" or "minkowski" {-} see help(dist)). }
+\CommentTok{\# DEFAULT is "euclidean"}
+\NormalTok{distance\_used }\OtherTok{=} \StringTok{"euclidean"}
+
+\CommentTok{\# Please ENTER the hierarchical clustering method to use (options are:}
+\CommentTok{\# "ward.D", "ward.D2", "single", "complete", "average", "mcquitty", "median" or "centroid").}
+\CommentTok{\# DEFAULT is "ward"}
+\NormalTok{hclust\_method }\OtherTok{=} \StringTok{"ward.D"}
+
+\CommentTok{\# Please ENTER the kmeans clustering method to use (options are:}
+\CommentTok{\# "Hartigan{-}Wong", "Lloyd", "Forgy", "MacQueen").}
+\CommentTok{\# DEFAULT is "Lloyd"}
+\NormalTok{kmeans\_method }\OtherTok{=} \StringTok{"Lloyd"}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{steps-1-2-explore-the-data}{%
+\subsection{Steps 1-2: Explore the
+data}\label{steps-1-2-explore-the-data}}
+
+(This was done above, so we skip it)
+
+\hypertarget{step-3.-select-segmentation-variables}{%
+\subsection{Step 3. Select Segmentation
+Variables}\label{step-3.-select-segmentation-variables}}
+
+For simplicity will use one representative question for each of the
+factor we found in Part 1 (we can also use the ``factor scores'' for
+each respondent) to represent our survey respondents. These are the
+\texttt{segmentation\_attributes\_used} selected below. We can choose
+the question with the highest absolute factor loading for each factor.
+For example, when we use 5 factors with the varimax rotation we can
+select questions Q.1.9 (I see my boat as a status symbol), Q1.18
+(Boating gives me a feeling of adventure), Q1.4 (I only consider buying
+a boat from a reputable brand), Q1.11 (I tend to perform minor boat
+repairs and maintenance on my own) and Q1.2 (When buying a boat getting
+the lowest price is more important than the boat brand) - try it. These
+are columns 10, 19, 5, 12, and 3, respectively of the data matrix
+\texttt{Projectdata}.
+
+\hypertarget{step-4-define-similarity-measure}{%
+\subsection{Step 4: Define similarity
+measure}\label{step-4-define-similarity-measure}}
+
+We need to define a distance metric that measures how different people
+(observations in general) are from each other. This can be an important
+choice. Here are the differences between the observations using the
+distance metric we selected:
+
+\begin{center}
+\begin{longtable}{lrrrrrrrrrr}
+\toprule
+  & Obs.01 & Obs.02 & Obs.03 & Obs.04 & Obs.05 & Obs.06 & Obs.07 & Obs.08 & Obs.09 & Obs.10\\
+\midrule
+Obs.01 & 0 &  &  &  &  &  &  &  &  & \\
+Obs.02 & 4 & 0 &  &  &  &  &  &  &  & \\
+Obs.03 & 4 & 3 & 0 &  &  &  &  &  &  & \\
+Obs.04 & 4 & 4 & 4 & 0 &  &  &  &  &  & \\
+Obs.05 & 4 & 4 & 5 & 4 & 0 &  &  &  &  & \\
+\addlinespace
+Obs.06 & 4 & 3 & 3 & 4 & 4 & 0 &  &  &  & \\
+Obs.07 & 6 & 5 & 6 & 6 & 4 & 5 & 0 &  &  & \\
+Obs.08 & 4 & 3 & 4 & 4 & 4 & 4 & 5 & 0 &  & \\
+Obs.09 & 5 & 4 & 5 & 4 & 3 & 4 & 4 & 3 & 0 & \\
+Obs.10 & 8 & 6 & 7 & 7 & 8 & 5 & 7 & 7 & 7 & 0\\
+\bottomrule
+\end{longtable}\end{center}
+
+\hypertarget{step-5-visualize-pair-wise-distances}{%
+\subsection{Step 5: Visualize Pair-wise
+Distances}\label{step-5-visualize-pair-wise-distances}}
+
+We can see the histogram of, say, the first 2 variables (can you change
+the code chunk in the raw .Rmd file to see other variables?)
+
+\begin{center}\includegraphics{MarketSegmentationProcessInClass_files/figure-latex/unnamed-chunk-16-1} \end{center}
+
+or the histogram of all pairwise distances for the euclidean distance:
+
+\begin{center}\includegraphics{MarketSegmentationProcessInClass_files/figure-latex/unnamed-chunk-17-1} \end{center}
+
+\hypertarget{step-6-method-and-number-of-segments}{%
+\subsection{Step 6: Method and Number of
+Segments}\label{step-6-method-and-number-of-segments}}
+
+We need to select the clustering method to use, as well as the number of
+cluster. It may be useful to see the dendrogram from Hierarchical
+Clustering, to have a quick idea of how the data may be segmented and
+how many segments there may be. Here is the dendrogram for our data:
+
+\begin{center}\includegraphics{MarketSegmentationProcessInClass_files/figure-latex/unnamed-chunk-18-1} \end{center}
+
+We can also plot the ``distances'' traveled before we need to merge any
+of the lower and smaller in size clusters into larger ones - the heights
+of the tree branches that link the clusters as we traverse the tree from
+its leaves to its root. If we have n observations, this plot has n-1
+numbers, we see the first 20 here.
+
+\begin{center}\includegraphics{MarketSegmentationProcessInClass_files/figure-latex/unnamed-chunk-19-1} \end{center}
+
+Here is the segment membership of the first 10 respondents if we use
+hierarchical clustering:
+
+\begin{center}
+\begin{longtable}{rr}
+\toprule
+Observation Number & Cluster\_Membership\\
+\midrule
+1 & 1\\
+2 & 2\\
+3 & 1\\
+4 & 3\\
+5 & 4\\
+\addlinespace
+6 & 1\\
+7 & 4\\
+8 & 2\\
+9 & 4\\
+10 & 3\\
+\bottomrule
+\end{longtable}\end{center}
+
+while this is the segment membership if we use k-means:
+
+\begin{center}
+\begin{longtable}{rr}
+\toprule
+Observation Number & Cluster\_Membership\\
+\midrule
+1 & 5\\
+2 & 5\\
+3 & 5\\
+4 & 5\\
+5 & 5\\
+\addlinespace
+6 & 2\\
+7 & 5\\
+8 & 5\\
+9 & 5\\
+10 & 4\\
+\bottomrule
+\end{longtable}\end{center}
+
+\hypertarget{step-7-profile-and-interpret-the-segments}{%
+\subsection{Step 7: Profile and interpret the
+segments}\label{step-7-profile-and-interpret-the-segments}}
+
+In market segmentation one may use variables to \textbf{profile} the
+segments which are not the same (necessarily) as those used to
+\textbf{segment} the market: the latter may be, for example,
+attitude/needs related (you define segments based on what the customers
+``need''), while the former may be any information that allows a company
+to identify the defined customer segments (e.g.~demographics, location,
+etc). Of course deciding which variables to use for segmentation and
+which to use for profiling (and then \textbf{activation} of the
+segmentation for business purposes) is largely subjective. In this case
+we can use all survey questions for profiling for now - the
+\texttt{profile\_attributes\_used} variables selected below.
+
+There are many ways to do the profiling of the segments. For example,
+here we show how the \emph{average} answers of the respondents \emph{in
+each segment} compare to the \emph{average answer of all respondents}
+using the ratio of the two. The idea is that if in a segment the average
+response to a question is very different (e.g.~away from ratio of 1)
+than the overall average, then that question may indicate something
+about the segment relative to the total population.
+
+Here are for example the profiles of the segments using the clusters
+found above. First let's see just the average answer people gave to each
+question for the different segments as well as the total population:
+
+\begin{center}
+\begin{longtable}{lrrrrrrrr}
+\toprule
+  & Population & Seg.1 & Seg.2 & Seg.3 & Seg.4 & Seg.5 & Seg.6 & Seg.7\\
+\midrule
+Q1.1 & 4.03 & 4.01 & 4.20 & 3.84 & 4.41 & 4.41 & 3.73 & 3.83\\
+Q1.2 & 2.89 & 2.29 & 2.74 & 3.77 & 2.63 & 4.33 & 2.90 & 3.04\\
+Q1.3 & 3.12 & 3.56 & 3.03 & 3.52 & 3.92 & 4.23 & 2.71 & 2.37\\
+Q1.4 & 3.89 & 4.26 & 3.98 & 3.65 & 4.23 & 4.36 & 3.56 & 3.57\\
+Q1.5 & 3.55 & 3.96 & 3.56 & 3.61 & 4.16 & 4.28 & 3.24 & 2.93\\
+\addlinespace
+Q1.6 & 3.95 & 4.27 & 4.00 & 3.89 & 4.69 & 4.47 & 3.57 & 3.51\\
+Q1.7 & 3.67 & 4.17 & 3.66 & 3.74 & 4.53 & 4.45 & 3.29 & 2.94\\
+Q1.8 & 3.74 & 3.25 & 3.85 & 3.73 & 3.81 & 4.41 & 3.59 & 3.94\\
+Q1.9 & 2.89 & 3.36 & 2.73 & 3.46 & 3.67 & 4.24 & 2.58 & 1.98\\
+Q1.10 & 3.37 & 3.16 & 3.28 & 3.65 & 3.47 & 4.31 & 3.47 & 3.08\\
+\addlinespace
+Q1.11 & 3.46 & 3.04 & 3.98 & 3.52 & 4.24 & 4.26 & 2.08 & 4.06\\
+Q1.12 & 2.86 & 2.16 & 2.74 & 3.68 & 2.11 & 4.42 & 2.85 & 3.42\\
+Q1.13 & 3.02 & 3.56 & 2.87 & 3.56 & 3.86 & 4.38 & 2.70 & 2.06\\
+Q1.14 & 3.25 & 3.67 & 3.19 & 3.64 & 4.13 & 4.31 & 2.79 & 2.51\\
+Q1.15 & 3.63 & 3.94 & 3.67 & 3.75 & 4.43 & 4.37 & 3.16 & 3.11\\
+\addlinespace
+Q1.16 & 3.10 & 3.34 & 3.20 & 3.48 & 3.95 & 4.32 & 2.43 & 2.52\\
+Q1.17 & 3.08 & 3.20 & 3.14 & 3.42 & 3.87 & 4.30 & 2.52 & 2.63\\
+Q1.18 & 4.12 & 4.38 & 4.17 & 3.91 & 4.72 & 4.43 & 3.82 & 3.84\\
+Q1.19 & 4.20 & 4.44 & 4.28 & 3.79 & 4.71 & 4.45 & 3.87 & 4.09\\
+Q1.20 & 3.16 & 3.40 & 3.23 & 3.47 & 3.99 & 4.26 & 2.57 & 2.59\\
+\addlinespace
+Q1.21 & 4.25 & 4.50 & 4.32 & 3.88 & 4.79 & 4.44 & 3.96 & 4.06\\
+Q1.22 & 4.01 & 4.27 & 4.08 & 3.84 & 4.60 & 4.37 & 3.64 & 3.74\\
+Q1.23 & 3.56 & 3.75 & 3.69 & 3.70 & 4.67 & 4.19 & 3.00 & 2.94\\
+Q1.24 & 4.11 & 4.47 & 4.16 & 3.77 & 4.64 & 4.45 & 3.83 & 3.78\\
+Q1.25 & 3.79 & 4.08 & 3.87 & 3.85 & 4.54 & 4.49 & 3.24 & 3.42\\
+\addlinespace
+Q1.26 & 2.95 & 3.45 & 2.81 & 3.63 & 4.00 & 4.36 & 2.49 & 1.94\\
+Q1.27 & 3.16 & 3.58 & 3.14 & 3.87 & 4.25 & 4.40 & 2.52 & 2.25\\
+Q1.28 & 3.31 & 3.64 & 3.32 & 3.71 & 4.29 & 4.37 & 2.79 & 2.55\\
+Q1.29 & 4.03 & 4.20 & 4.07 & 3.80 & 4.56 & 4.53 & 3.70 & 3.90\\
+Q2 & 0.90 & 0.93 & 0.91 & 0.97 & 0.92 & 1.18 & 0.77 & 0.92\\
+\addlinespace
+Q2.Cluster & 0.74 & 0.75 & 0.77 & 0.73 & 0.78 & 0.75 & 0.65 & 0.81\\
+Q3 & 4.15 & 4.25 & 4.14 & 4.25 & 4.46 & 4.60 & 4.02 & 3.88\\
+Q4 & 3.92 & 4.39 & 3.67 & 4.60 & 4.40 & 4.45 & 3.90 & 3.16\\
+Q5 & 3.25 & 3.80 & 3.05 & 3.84 & 4.37 & 4.77 & 2.78 & 2.35\\
+Q6 & 22.83 & 24.48 & 22.19 & 22.84 & 26.09 & 24.35 & 22.75 & 20.07\\
+\addlinespace
+Q7.1 & 2.23 & 1.95 & 2.21 & 2.84 & 2.32 & 3.11 & 2.00 & 2.28\\
+Q7.2 & 4.00 & 4.25 & 4.00 & 3.73 & 4.17 & 4.00 & 3.95 & 3.88\\
+Q7.3 & 3.80 & 3.95 & 3.85 & 3.70 & 4.10 & 3.98 & 3.68 & 3.52\\
+Q7.4 & 3.67 & 3.84 & 3.69 & 3.72 & 3.96 & 4.03 & 3.53 & 3.37\\
+Q8 & 2.31 & 2.44 & 2.46 & 2.08 & 2.66 & 2.32 & 1.95 & 2.27\\
+\addlinespace
+Q9.1 & 3.57 & 3.28 & 3.70 & 3.60 & 3.87 & 4.03 & 3.23 & 3.75\\
+Q9.2 & 3.41 & 3.63 & 3.38 & 3.60 & 3.72 & 3.92 & 3.20 & 3.11\\
+Q9.3 & 3.72 & 4.05 & 3.66 & 3.72 & 3.90 & 4.07 & 3.68 & 3.35\\
+Q9.4 & 3.19 & 3.38 & 3.16 & 3.52 & 3.51 & 3.92 & 3.05 & 2.68\\
+Q9.5 & 3.51 & 3.84 & 3.45 & 3.56 & 3.87 & 3.94 & 3.47 & 2.93\\
+\addlinespace
+Q10 & 46.25 & 52.82 & 48.54 & 40.06 & 55.10 & 45.82 & 41.96 & 38.15\\
+Q11 & 1.45 & 1.57 & 1.41 & 1.34 & 1.38 & 1.40 & 1.57 & 1.35\\
+Q12 & 13.42 & 14.08 & 13.34 & 12.89 & 13.99 & 12.66 & 13.56 & 12.88\\
+Q13 & 2.08 & 2.23 & 1.99 & 2.28 & 2.17 & 2.60 & 2.09 & 1.80\\
+Q14 & 2.27 & 2.21 & 2.32 & 1.78 & 1.86 & 1.68 & 2.45 & 2.65\\
+\addlinespace
+Q15 & 2.54 & 2.38 & 2.66 & 1.79 & 2.32 & 1.74 & 2.67 & 3.06\\
+Q16 & 24.77 & 25.42 & 24.30 & 21.25 & 23.82 & 23.27 & 26.38 & 25.75\\
+Q16.1 & 3.66 & 3.72 & 3.71 & 3.81 & 3.88 & 4.19 & 3.44 & 3.41\\
+Q16.2 & 3.56 & 3.70 & 3.53 & 3.75 & 3.88 & 4.28 & 3.30 & 3.34\\
+Q16.3 & 3.72 & 3.87 & 3.71 & 3.76 & 4.13 & 4.38 & 3.43 & 3.51\\
+\addlinespace
+Q16.4 & 3.76 & 3.98 & 3.74 & 3.78 & 4.18 & 4.31 & 3.46 & 3.59\\
+Q16.5 & 3.71 & 3.83 & 3.71 & 3.85 & 4.04 & 4.21 & 3.47 & 3.48\\
+Q16.6 & 3.82 & 4.04 & 3.81 & 3.92 & 4.21 & 4.41 & 3.55 & 3.56\\
+Q16.7 & 3.91 & 4.13 & 3.91 & 3.96 & 4.21 & 4.48 & 3.65 & 3.67\\
+Q16.8 & 3.91 & 4.03 & 3.91 & 3.90 & 4.25 & 4.38 & 3.66 & 3.79\\
+\addlinespace
+Q16.9 & 3.91 & 4.05 & 3.92 & 3.88 & 4.20 & 4.32 & 3.71 & 3.77\\
+Q16.10 & 3.83 & 4.06 & 3.84 & 3.74 & 4.17 & 3.92 & 3.64 & 3.69\\
+Q16.11 & 3.65 & 3.74 & 3.62 & 3.84 & 3.99 & 4.30 & 3.45 & 3.41\\
+Q16.12 & 3.56 & 3.85 & 3.54 & 3.55 & 3.97 & 3.69 & 3.45 & 3.17\\
+Q16.13 & 3.66 & 3.93 & 3.62 & 3.79 & 4.02 & 4.33 & 3.45 & 3.31\\
+\addlinespace
+Q16.14 & 3.75 & 4.04 & 3.71 & 3.77 & 4.19 & 4.36 & 3.49 & 3.46\\
+Q16.15 & 3.88 & 4.14 & 3.88 & 3.81 & 4.28 & 4.33 & 3.63 & 3.65\\
+Q16.16 & 3.67 & 3.94 & 3.62 & 3.75 & 4.09 & 4.34 & 3.45 & 3.31\\
+Q16.17 & 3.85 & 4.02 & 3.84 & 3.83 & 4.23 & 4.35 & 3.60 & 3.69\\
+Q16.18 & 3.88 & 4.04 & 3.88 & 3.85 & 4.23 & 4.35 & 3.65 & 3.74\\
+\addlinespace
+Q16.19 & 3.89 & 4.06 & 3.90 & 3.83 & 4.29 & 4.29 & 3.63 & 3.74\\
+Q16.20 & 3.97 & 4.14 & 3.99 & 3.85 & 4.33 & 4.38 & 3.74 & 3.82\\
+Q16.21 & 3.91 & 4.08 & 3.90 & 3.82 & 4.27 & 4.37 & 3.69 & 3.82\\
+Q16.22 & 3.93 & 3.98 & 3.96 & 3.81 & 4.29 & 4.36 & 3.67 & 3.91\\
+Q16.23 & 3.99 & 4.14 & 4.01 & 3.90 & 4.33 & 4.33 & 3.75 & 3.88\\
+\addlinespace
+Q16.24 & 3.31 & 3.28 & 3.27 & 3.65 & 3.31 & 4.15 & 3.17 & 3.23\\
+Q16.25 & 3.65 & 3.85 & 3.66 & 3.74 & 4.09 & 4.27 & 3.34 & 3.34\\
+Q16.26 & 3.90 & 4.07 & 3.90 & 3.86 & 4.26 & 4.38 & 3.66 & 3.72\\
+Q16.27 & 3.63 & 3.81 & 3.60 & 3.78 & 4.05 & 4.36 & 3.37 & 3.31\\
+Q17 & 0.33 & 0.41 & 0.36 & 0.30 & 0.52 & 0.45 & 0.19 & 0.28\\
+\addlinespace
+Q18 & 0.50 & 0.45 & 0.53 & 0.30 & 0.41 & 0.31 & 0.55 & 0.62\\
+\bottomrule
+\end{longtable}\end{center}
+
+We can also ``visualize'' the segments using \textbf{snake plots} for
+each cluster. For example, we can plot the means of the profiling
+variables for each of our clusters to better visualize differences
+between segments. For better visualization we plot the standardized
+profiling variables.
+
+\begin{center}\includegraphics{MarketSegmentationProcessInClass_files/figure-latex/unnamed-chunk-23-1} \end{center}
+
+We can also compare the averages of the profiling variables of each
+segment relative to the average of the variables across the whole
+population. This can also help us better understand whether there are
+indeed clusters in our data (e.g.~if all segments are much like the
+overall population, there may be no segments). For example, we can
+measure the ratios of the average for each cluster to the average of the
+population, minus 1, (e.g.~\texttt{avg(cluster)} \texttt{/}
+\texttt{avg(population)} \texttt{-1}) for each segment and variable:
+
+\begin{center}
+\begin{longtable}{lrrrrrrr}
+\toprule
+  & Seg.1 & Seg.2 & Seg.3 & Seg.4 & Seg.5 & Seg.6 & Seg.7\\
+\midrule
+Q1.1 & -0.01 & 0.04 & -0.05 & 0.09 & 0.10 & -0.07 & -0.05\\
+Q1.2 & -0.21 & -0.05 & 0.30 & -0.09 & 0.50 & 0.01 & 0.05\\
+Q1.3 & 0.14 & -0.03 & 0.13 & 0.26 & 0.36 & -0.13 & -0.24\\
+Q1.4 & 0.10 & 0.02 & -0.06 & 0.09 & 0.12 & -0.08 & -0.08\\
+Q1.5 & 0.11 & 0.00 & 0.02 & 0.17 & 0.20 & -0.09 & -0.17\\
+\addlinespace
+Q1.6 & 0.08 & 0.01 & -0.02 & 0.19 & 0.13 & -0.10 & -0.11\\
+Q1.7 & 0.13 & 0.00 & 0.02 & 0.23 & 0.21 & -0.10 & -0.20\\
+Q1.8 & -0.13 & 0.03 & 0.00 & 0.02 & 0.18 & -0.04 & 0.05\\
+Q1.9 & 0.16 & -0.05 & 0.20 & 0.27 & 0.47 & -0.11 & -0.31\\
+Q1.10 & -0.06 & -0.03 & 0.08 & 0.03 & 0.28 & 0.03 & -0.09\\
+\addlinespace
+Q1.11 & -0.12 & 0.15 & 0.02 & 0.23 & 0.23 & -0.40 & 0.17\\
+Q1.12 & -0.24 & -0.04 & 0.29 & -0.26 & 0.55 & 0.00 & 0.20\\
+Q1.13 & 0.18 & -0.05 & 0.18 & 0.28 & 0.45 & -0.11 & -0.32\\
+Q1.14 & 0.13 & -0.02 & 0.12 & 0.27 & 0.33 & -0.14 & -0.23\\
+Q1.15 & 0.09 & 0.01 & 0.03 & 0.22 & 0.20 & -0.13 & -0.14\\
+\addlinespace
+Q1.16 & 0.08 & 0.03 & 0.12 & 0.27 & 0.39 & -0.22 & -0.19\\
+Q1.17 & 0.04 & 0.02 & 0.11 & 0.25 & 0.39 & -0.18 & -0.15\\
+Q1.18 & 0.06 & 0.01 & -0.05 & 0.15 & 0.07 & -0.07 & -0.07\\
+Q1.19 & 0.06 & 0.02 & -0.10 & 0.12 & 0.06 & -0.08 & -0.03\\
+Q1.20 & 0.08 & 0.02 & 0.10 & 0.26 & 0.35 & -0.19 & -0.18\\
+\addlinespace
+Q1.21 & 0.06 & 0.02 & -0.09 & 0.13 & 0.04 & -0.07 & -0.05\\
+Q1.22 & 0.07 & 0.02 & -0.04 & 0.15 & 0.09 & -0.09 & -0.07\\
+Q1.23 & 0.05 & 0.03 & 0.04 & 0.31 & 0.18 & -0.16 & -0.17\\
+Q1.24 & 0.09 & 0.01 & -0.08 & 0.13 & 0.08 & -0.07 & -0.08\\
+Q1.25 & 0.08 & 0.02 & 0.02 & 0.20 & 0.18 & -0.15 & -0.10\\
+\addlinespace
+Q1.26 & 0.17 & -0.05 & 0.23 & 0.36 & 0.48 & -0.16 & -0.34\\
+Q1.27 & 0.14 & -0.01 & 0.22 & 0.35 & 0.40 & -0.20 & -0.29\\
+Q1.28 & 0.10 & 0.00 & 0.12 & 0.30 & 0.32 & -0.16 & -0.23\\
+Q1.29 & 0.04 & 0.01 & -0.06 & 0.13 & 0.12 & -0.08 & -0.03\\
+Q2 & 0.03 & 0.01 & 0.08 & 0.03 & 0.31 & -0.14 & 0.02\\
+\addlinespace
+Q2.Cluster & 0.01 & 0.04 & -0.02 & 0.05 & 0.01 & -0.13 & 0.09\\
+Q3 & 0.02 & 0.00 & 0.02 & 0.07 & 0.11 & -0.03 & -0.07\\
+Q4 & 0.12 & -0.06 & 0.18 & 0.12 & 0.14 & 0.00 & -0.19\\
+Q5 & 0.17 & -0.06 & 0.18 & 0.34 & 0.47 & -0.15 & -0.28\\
+Q6 & 0.07 & -0.03 & 0.00 & 0.14 & 0.07 & 0.00 & -0.12\\
+\addlinespace
+Q7.1 & -0.13 & -0.01 & 0.27 & 0.04 & 0.39 & -0.10 & 0.02\\
+Q7.2 & 0.06 & 0.00 & -0.07 & 0.04 & 0.00 & -0.01 & -0.03\\
+Q7.3 & 0.04 & 0.01 & -0.03 & 0.08 & 0.05 & -0.03 & -0.07\\
+Q7.4 & 0.04 & 0.00 & 0.01 & 0.08 & 0.10 & -0.04 & -0.08\\
+Q8 & 0.06 & 0.06 & -0.10 & 0.15 & 0.00 & -0.15 & -0.02\\
+\addlinespace
+Q9.1 & -0.08 & 0.03 & 0.01 & 0.08 & 0.13 & -0.10 & 0.05\\
+Q9.2 & 0.06 & -0.01 & 0.06 & 0.09 & 0.15 & -0.06 & -0.09\\
+Q9.3 & 0.09 & -0.02 & 0.00 & 0.05 & 0.09 & -0.01 & -0.10\\
+Q9.4 & 0.06 & -0.01 & 0.10 & 0.10 & 0.23 & -0.04 & -0.16\\
+Q9.5 & 0.10 & -0.02 & 0.01 & 0.10 & 0.12 & -0.01 & -0.16\\
+\addlinespace
+Q10 & 0.14 & 0.05 & -0.13 & 0.19 & -0.01 & -0.09 & -0.18\\
+Q11 & 0.08 & -0.03 & -0.07 & -0.05 & -0.03 & 0.09 & -0.07\\
+Q12 & 0.05 & -0.01 & -0.04 & 0.04 & -0.06 & 0.01 & -0.04\\
+Q13 & 0.07 & -0.04 & 0.09 & 0.04 & 0.25 & 0.00 & -0.14\\
+Q14 & -0.03 & 0.02 & -0.21 & -0.18 & -0.26 & 0.08 & 0.17\\
+\addlinespace
+Q15 & -0.06 & 0.05 & -0.30 & -0.09 & -0.32 & 0.05 & 0.20\\
+Q16 & 0.03 & -0.02 & -0.14 & -0.04 & -0.06 & 0.07 & 0.04\\
+Q16.1 & 0.02 & 0.01 & 0.04 & 0.06 & 0.15 & -0.06 & -0.07\\
+Q16.2 & 0.04 & -0.01 & 0.05 & 0.09 & 0.20 & -0.07 & -0.06\\
+Q16.3 & 0.04 & 0.00 & 0.01 & 0.11 & 0.18 & -0.08 & -0.06\\
+\addlinespace
+Q16.4 & 0.06 & -0.01 & 0.01 & 0.11 & 0.15 & -0.08 & -0.04\\
+Q16.5 & 0.03 & 0.00 & 0.04 & 0.09 & 0.14 & -0.06 & -0.06\\
+Q16.6 & 0.06 & 0.00 & 0.03 & 0.10 & 0.15 & -0.07 & -0.07\\
+Q16.7 & 0.06 & 0.00 & 0.01 & 0.08 & 0.15 & -0.07 & -0.06\\
+Q16.8 & 0.03 & 0.00 & 0.00 & 0.09 & 0.12 & -0.06 & -0.03\\
+\addlinespace
+Q16.9 & 0.03 & 0.00 & -0.01 & 0.07 & 0.10 & -0.05 & -0.03\\
+Q16.10 & 0.06 & 0.00 & -0.02 & 0.09 & 0.02 & -0.05 & -0.04\\
+Q16.11 & 0.02 & -0.01 & 0.05 & 0.09 & 0.18 & -0.05 & -0.07\\
+Q16.12 & 0.08 & 0.00 & 0.00 & 0.11 & 0.04 & -0.03 & -0.11\\
+Q16.13 & 0.07 & -0.01 & 0.03 & 0.10 & 0.18 & -0.06 & -0.10\\
+\addlinespace
+Q16.14 & 0.08 & -0.01 & 0.01 & 0.12 & 0.16 & -0.07 & -0.08\\
+Q16.15 & 0.07 & 0.00 & -0.02 & 0.10 & 0.12 & -0.06 & -0.06\\
+Q16.16 & 0.07 & -0.01 & 0.02 & 0.12 & 0.18 & -0.06 & -0.10\\
+Q16.17 & 0.05 & 0.00 & -0.01 & 0.10 & 0.13 & -0.06 & -0.04\\
+Q16.18 & 0.04 & 0.00 & -0.01 & 0.09 & 0.12 & -0.06 & -0.04\\
+\addlinespace
+Q16.19 & 0.04 & 0.00 & -0.02 & 0.10 & 0.10 & -0.07 & -0.04\\
+Q16.20 & 0.04 & 0.00 & -0.03 & 0.09 & 0.10 & -0.06 & -0.04\\
+Q16.21 & 0.04 & 0.00 & -0.02 & 0.09 & 0.12 & -0.06 & -0.02\\
+Q16.22 & 0.01 & 0.01 & -0.03 & 0.09 & 0.11 & -0.07 & -0.01\\
+Q16.23 & 0.04 & 0.01 & -0.02 & 0.09 & 0.08 & -0.06 & -0.03\\
+\addlinespace
+Q16.24 & -0.01 & -0.01 & 0.10 & 0.00 & 0.25 & -0.04 & -0.02\\
+Q16.25 & 0.06 & 0.00 & 0.03 & 0.12 & 0.17 & -0.08 & -0.08\\
+Q16.26 & 0.05 & 0.00 & -0.01 & 0.09 & 0.12 & -0.06 & -0.04\\
+Q16.27 & 0.05 & -0.01 & 0.04 & 0.12 & 0.20 & -0.07 & -0.09\\
+Q17 & 0.24 & 0.08 & -0.09 & 0.56 & 0.36 & -0.44 & -0.17\\
+\addlinespace
+Q18 & -0.10 & 0.06 & -0.39 & -0.18 & -0.38 & 0.11 & 0.24\\
+\bottomrule
+\end{longtable}\end{center}
+
+\textbf{Questions}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  What do the numbers in the last table indicate? What numbers are the
+  more informative?
+\item
+  Based on the tables and snake plot above, what are some key features
+  of each of the segments of this solution?
+\end{enumerate}
+
+\textbf{Answers}
+
+\begin{itemize}
+\tightlist
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\end{itemize}
+
+\hypertarget{step-8-robustness-analysis}{%
+\subsection{Step 8: Robustness
+Analysis}\label{step-8-robustness-analysis}}
+
+We should also consider the robustness of our analysis as we change the
+clustering method and parameters. Once we are comfortable with the
+solution we can finally answer our first business questions:
+
+\textbf{Questions}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  How many segments are there in our market? How many do you select and
+  why? Try a few and explain your final choice based on a) statistical
+  arguments, b) on interpretation arguments, c) on business arguments
+  (\textbf{you need to consider all three types of arguments})
+\item
+  Can you describe the segments you found based on the profiles?
+\item
+  What if you change the number of factors and in general you
+  \emph{iterate the whole analysis}? \textbf{Iterations} are key in data
+  science.
+\item
+  Can you now answer the
+  \href{http://inseaddataanalytics.github.io/INSEADAnalytics/Boats-A-prerelease.pdf}{Boats
+  case questions}? What business decisions do you recommend to this
+  company based on your analysis?
+\end{enumerate}
+
+\textbf{Answers}
+
+\begin{itemize}
+\tightlist
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\end{itemize}
+
+\clearpage
+
+\hypertarget{part-3-purchase-drivers}{%
+\section{Part 3: Purchase Drivers}\label{part-3-purchase-drivers}}
+
+We will now use the
+\href{http://inseaddataanalytics.github.io/INSEADAnalytics/CourseSessions/Sessions67/ClassificationAnalysisReading.html}{classification
+analysis} methods to understand the key purchase drivers for boats (a
+similar analysis can be done for recommendation drivers). For simplicity
+we do not follow the ``generic'' steps of classification discussed in
+that reading, and only consider the classification and purchase drivers
+analysis for the segments we found above.
+
+We are interested in understanding the purchase drivers, hence our
+\textbf{dependent} variable is column 82 of the Boats data (Q18) - why
+is that? We will use only the subquestions of \textbf{Question 16} of
+the case for now, and also select some of the parameters for this part
+of the analysis:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Please ENTER the class (dependent) variable:}
+\CommentTok{\# Please use numbers, not column names! e.g. 82 uses the 82nd column are dependent variable.}
+\CommentTok{\# YOU NEED TO MAKE SURE THAT THE DEPENDENT VARIABLES TAKES ONLY 2 VALUES: 0 and 1!!!}
+\NormalTok{dependent\_variable}\OtherTok{=} \DecValTok{82}
+
+\CommentTok{\# Please ENTER the attributes to use as independent variables }
+\CommentTok{\# Please use numbers, not column names! e.g. c(1:5, 7, 8) uses columns 1,2,3,4,5,7,8}
+\NormalTok{independent\_variables}\OtherTok{=} \FunctionTok{c}\NormalTok{(}\DecValTok{54}\SpecialCharTok{:}\DecValTok{80}\NormalTok{) }\CommentTok{\# use 54{-}80 for boats}
+
+\CommentTok{\# Please ENTER the profit/cost values for the correctly and wrong classified data:}
+\NormalTok{actual\_1\_predict\_1 }\OtherTok{=} \DecValTok{100}
+\NormalTok{actual\_1\_predict\_0 }\OtherTok{=} \SpecialCharTok{{-}}\DecValTok{75}
+\NormalTok{actual\_0\_predict\_1 }\OtherTok{=} \SpecialCharTok{{-}}\DecValTok{50}
+\NormalTok{actual\_0\_predict\_0 }\OtherTok{=} \DecValTok{0}
+
+\CommentTok{\# Please ENTER the probability threshold above which an observations  }
+\CommentTok{\# is predicted as class 1:}
+\NormalTok{Probability\_Threshold}\OtherTok{=}\DecValTok{50} \CommentTok{\# between 1 and 99\%}
+
+\CommentTok{\# Please ENTER the percentage of data used for estimation}
+\NormalTok{estimation\_data\_percent }\OtherTok{=} \DecValTok{80}
+\NormalTok{validation\_data\_percent }\OtherTok{=} \DecValTok{10}
+
+\CommentTok{\# Please enter 0 if you want to "randomly" split the data in estimation and validation/test}
+\NormalTok{random\_sampling }\OtherTok{=} \DecValTok{0}
+
+\CommentTok{\# Tree parameter}
+\CommentTok{\# PLEASE ENTER THE Tree (CART) complexity control cp (e.g. 0.001 to 0.02, depending on the data)}
+\NormalTok{CART\_cp }\OtherTok{=} \FloatTok{0.01}
+
+\CommentTok{\# Please enter the minimum size of a segment for the analysis to be done only for that segment}
+\NormalTok{min\_segment }\OtherTok{=} \DecValTok{100}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Questions}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  How do you select the profit/cost values for the analysis? Does the
+  variable 100, -50, -75, 0 above relate to the final business
+  decisions? How?
+\item
+  What does the variable ``Probability\_Threshold'' affect? Does it
+  relate to the final business decisions? How?
+\end{enumerate}
+
+\textbf{Answers}
+
+\begin{itemize}
+\tightlist
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\end{itemize}
+
+We will use two classification trees and logistic regression. You can
+select ``complexity'' control for one of the classification trees in the
+code chunk of the raw .Rmd file here
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{CART\_control }\OtherTok{=} \FloatTok{0.001}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Question}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  How can this parameter affect the final results? What business
+  implications can this parameter choice have?
+\end{enumerate}
+
+\textbf{Answer}
+
+\begin{itemize}
+\tightlist
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\end{itemize}
+
+This is a ``small tree'' classification for example:
+
+\begin{center}\includegraphics{MarketSegmentationProcessInClass_files/figure-latex/unnamed-chunk-28-1} \end{center}
+
+After also running the large tree and the logistic regression
+classifiers, we can then check how much ``weight'' these three methods
+put on the different purchase drivers (Q16 of the survey):
+
+\begin{center}
+\begin{longtable}{lrrr}
+\toprule
+  & CART 1 & CART 2 & Logistic Regr.\\
+\midrule
+Q16.1 & 0.0000000 & 0.0110197 & 0.0909091\\
+Q16.2 & -1.0000000 & -0.8994543 & -0.7727273\\
+Q16.3 & 0.1781076 & 0.3994461 & 0.0454545\\
+Q16.4 & -0.2729842 & -0.7653571 & -0.2045455\\
+Q16.5 & 0.1948052 & 0.6577938 & 0.2500000\\
+\addlinespace
+Q16.6 & -0.1320648 & -0.1039517 & -0.2954545\\
+Q16.7 & 0.0000000 & -0.0545403 & -0.0227273\\
+Q16.8 & 0.0723126 & 0.6581984 & 0.4090909\\
+Q16.9 & 0.0000000 & 0.0056923 & 0.4772727\\
+Q16.10 & 0.0000000 & 0.4917861 & 0.7500000\\
+\addlinespace
+Q16.11 & -0.3209647 & -0.2301927 & -0.4545455\\
+Q16.12 & 0.1404807 & 0.7367238 & 0.7272727\\
+Q16.13 & -0.1508388 & -0.3358969 & -0.5454545\\
+Q16.14 & -0.2136343 & -0.2026567 & -0.3181818\\
+Q16.15 & 0.1340070 & 0.0961085 & 0.2954545\\
+\addlinespace
+Q16.16 & -0.5755178 & -0.6404725 & -1.0000000\\
+Q16.17 & -0.5041929 & -0.8468072 & -0.3863636\\
+Q16.18 & -0.0994017 & -0.4040648 & -0.2272727\\
+Q16.19 & 0.2862924 & 0.2973946 & 0.4090909\\
+Q16.20 & 0.2652031 & 0.2999890 & 0.0681818\\
+\addlinespace
+Q16.21 & 0.9530697 & 1.0000000 & 0.5000000\\
+Q16.22 & 0.6291439 & 0.7394180 & 0.2045455\\
+Q16.23 & -0.4365717 & -0.4120430 & -0.1136364\\
+Q16.24 & 0.5189457 & 0.3721827 & 0.3409091\\
+Q16.25 & -0.1706865 & -0.9380984 & -0.2500000\\
+\addlinespace
+Q16.26 & 0.3420844 & 0.2453395 & 0.3636364\\
+Q16.27 & 0.0000000 & 0.7199355 & 0.4090909\\
+\bottomrule
+\end{longtable}\end{center}
+
+Finally, if we were to use the estimated classification models on the
+test data, we would get the following profit curves (see the raw .Rmd
+file to select the business profit parameters).
+
+The profit curve using the small classification tree:
+
+\begin{center}\includegraphics{MarketSegmentationProcessInClass_files/figure-latex/unnamed-chunk-34-1} \end{center}
+
+The profit curve using the large classification tree:
+
+\begin{center}\includegraphics{MarketSegmentationProcessInClass_files/figure-latex/unnamed-chunk-35-1} \end{center}
+
+The profit curve using the logistic regression classifier:
+
+\begin{center}\includegraphics{MarketSegmentationProcessInClass_files/figure-latex/unnamed-chunk-36-1} \end{center}
+
+These are the maximum total profit achieved in the test data using the
+three classifiers (without any segment specific analysis so far).
+
+\begin{center}
+\begin{longtable}{lrr}
+\toprule
+  & Percentile & Profit\\
+\midrule
+Small Tree & 100.00 & 4650\\
+Large Tree & 95.04 & 4675\\
+Logistic Regression & 98.58 & 4850\\
+\bottomrule
+\end{longtable}\end{center}
+
+\clearpage
+
+\hypertarget{part-4-business-decisions}{%
+\section{Part 4: Business Decisions}\label{part-4-business-decisions}}
+
+We will now get the results of the overall process (parts 1-3) and based
+on them make business decisions (e.g.~answer the questions of the Boats
+case study). Specifically, we will study the purchase drivers for each
+segment we found and consider the profit curves of the developed models
+on our test data.
+
+\textbf{Final Solution: Segment Specific Analysis}
+
+Let's see first how many observations we have in each segment, for the
+segments we selected above:
+
+\setkeys{Gin}{height=\textheight}\adjustbox{width=\linewidth}{
+\begin{tabular}{lrrrrrrr}
+\toprule
+  & Segment 1 & Segment 2 & Segment 3 & Segment 4 & Segment 5 & Segment 6 & Segment 7\\
+\midrule
+Number of Obs. & 365 & 921 & 201 & 252 & 119 & 605 & 350\\
+\bottomrule
+\end{tabular}}\setkeys{Gin}{height=\maxheight}
+
+This is our final segment specific analysis and solution. We can study
+now the purchase drivers (average answers to Q16 of the survey) for each
+segment. They are as follows:
+
+\begin{center}
+\begin{longtable}{lrrrrrrr}
+\toprule
+  & Segment 1 & Segment 2 & Segment 3 & Segment 4 & Segment 5 & Segment 6 & Segment 7\\
+\midrule
+Q16.2 & -0.32 & -0.79 & -0.27 & -0.29 & -0.15 & -0.17 & -0.80\\
+Q16.3 & 0.04 & -0.10 & 0.06 & 0.21 & 0.44 & -0.04 & -0.20\\
+Q16.4 & -0.54 & -0.34 & 0.21 & -0.08 & 0.76 & -0.04 & 0.37\\
+Q16.5 & 0.68 & 0.41 & -0.45 & 0.58 & -0.65 & -0.25 & 0.57\\
+Q16.6 & -0.36 & -0.17 & -0.24 & -0.17 & 0.24 & 0.25 & -0.17\\
+\addlinespace
+Q16.7 & -0.04 & 0.52 & 0.03 & -0.17 & -0.09 & -0.25 & -0.40\\
+Q16.8 & 0.32 & 0.14 & 0.03 & -0.29 & 0.24 & 0.29 & 0.87\\
+Q16.9 & 0.43 & 0.10 & 0.06 & 0.25 & 0.71 & 0.58 & 0.13\\
+Q16.10 & 0.14 & 0.90 & -0.30 & 0.17 & 0.44 & -0.04 & 0.70\\
+Q16.11 & -0.04 & -0.45 & 0.67 & -0.67 & -0.15 & -0.58 & 0.17\\
+\addlinespace
+Q16.12 & 0.36 & 0.59 & 1.00 & 0.71 & 1.00 & 0.17 & -0.27\\
+Q16.13 & -0.43 & -0.38 & -0.33 & -0.12 & -0.79 & 0.00 & -0.03\\
+Q16.14 & -0.25 & -0.62 & 0.06 & -0.33 & 0.68 & -0.08 & -0.40\\
+Q16.15 & 0.79 & -0.14 & 0.45 & -0.04 & -0.26 & 0.25 & 0.40\\
+Q16.16 & 0.39 & -0.62 & -0.33 & -1.00 & -0.09 & -0.46 & -0.67\\
+\addlinespace
+Q16.17 & 0.14 & -0.21 & -0.76 & -0.21 & -0.15 & -0.42 & 0.03\\
+Q16.18 & -0.68 & 0.21 & -0.45 & -0.17 & -0.47 & -0.29 & -0.30\\
+Q16.19 & -0.54 & 0.41 & -0.24 & 0.67 & 0.29 & 1.00 & 0.07\\
+Q16.20 & 0.21 & -0.17 & 0.33 & -0.50 & -0.18 & 0.04 & -0.10\\
+Q16.21 & 0.39 & 1.00 & 0.30 & -0.62 & -0.35 & 0.42 & 0.60\\
+\addlinespace
+Q16.22 & -0.18 & -0.07 & 0.06 & 0.25 & 0.68 & 0.96 & -0.33\\
+Q16.23 & -0.32 & 0.17 & -0.18 & 0.46 & 0.59 & -0.79 & 0.10\\
+Q16.24 & 0.25 & 0.83 & -0.52 & 0.08 & -0.15 & 0.12 & 0.63\\
+Q16.25 & -0.36 & -0.83 & 0.06 & 0.75 & -0.41 & -0.83 & 1.00\\
+Q16.26 & 0.54 & 0.34 & -0.06 & 0.58 & -0.18 & 0.67 & 0.00\\
+\addlinespace
+Q16.27 & 1.00 & 0.34 & 0.03 & 0.96 & -0.38 & 0.33 & 0.67\\
+\bottomrule
+\end{longtable}\end{center}
+
+The profit curves for the test data in this case are as follows. The
+profit curve using the small classification tree is:
+
+\begin{center}\includegraphics{MarketSegmentationProcessInClass_files/figure-latex/unnamed-chunk-40-1} \end{center}
+
+The profit curve using the large classification tree is:
+
+\begin{center}\includegraphics{MarketSegmentationProcessInClass_files/figure-latex/unnamed-chunk-41-1} \end{center}
+
+The profit curve using the logistic regression classifier:
+
+\begin{center}\includegraphics{MarketSegmentationProcessInClass_files/figure-latex/unnamed-chunk-42-1} \end{center}
+
+These are the maximum total profit achieved in the test data using the
+three classifiers with the selected market segmentation solution.
+
+\begin{center}
+\begin{longtable}{lrr}
+\toprule
+  & Percentile & Profit\\
+\midrule
+Small Tree & 100.00 & 4650\\
+Large Tree & 100.00 & 4650\\
+Logistic Regression & 87.94 & 5225\\
+\bottomrule
+\end{longtable}\end{center}
+
+\textbf{Questions:}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  What are the main purchase drivers for the segments and solution you
+  found?
+\item
+  How different are the purchase drivers you find when you use
+  segmentation versus when you study all customers as ``one segment''?
+  Why?
+\item
+  Based on the overall analysis, what segmentation would you choose?
+\item
+  What is the business profit the company can achieve (as measured with
+  the test data) based on your solution?
+\item
+  What business decisions can the company make based on this analysis?
+\end{enumerate}
+
+\textbf{Answers:}
+
+\begin{itemize}
+\tightlist
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\end{itemize}
+
+\textbf{You have now completed your first market segmentation project.}
+Do you have data from another survey you can use with this report now?
+
+\textbf{Extra question}: explore and report a new segmentation
+analysis\ldots{}
+
+\end{document}

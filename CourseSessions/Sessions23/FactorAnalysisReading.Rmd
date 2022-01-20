@@ -1,6 +1,6 @@
 ---
 title: "Derived Attributes and Dimensionality Reduction"
-author: "T. Evgeniou"
+author: "R. Witzel"
 output:
   html_document:
     css: ../../AnalyticsStyles/default.css

@@ -64,8 +64,8 @@ options(knitr.kable.NA = '')
 
 # Run below only once, then comment out
 # New versions of the networkD3 package may not work properly, so install the following version
-#packageurl <- "https://cran.r-project.org/src/contrib/Archive/networkD3/networkD3_0.2.13.tar.gz"
-#install.packages(packageurl, repos=NULL, type="source")
+# packageurl <- "https://cran.r-project.org/src/contrib/Archive/networkD3/networkD3_0.2.13.tar.gz"
+# install.packages(packageurl, repos=NULL, type="source")
 ```
 
 <hr>\clearpage
@@ -76,7 +76,7 @@ First we load the data to use (see the raw .Rmd file to change the data file as 
 
 ```{r setupdata1E, echo=TRUE, tidy=TRUE}
 # Please ENTER the name of the file with the data used. The file should be a .csv with one row per observation (e.g. person) and one column per attribute. Do not add .csv at the end, make sure the data are numeric.
-datafile_name = "Boats"
+datafile_name = "C:/Users/rwitzel/OneDrive/Documents/INSEAD/P3/Data Science/Tutorial 3/INSEADAnalytics/CourseSessions/Sessions23/data/Boats.csv"
 
 # Please enter the minimum number below which you would like not to print - this makes the readability of the tables easier. Default values are either 10e6 (to print everything) or 0.5. Try both to see the difference.
 MIN_VALUE = 0.5
@@ -87,6 +87,7 @@ max_data_report = 10
 ```
 
 ```{r}
+
 ProjectData <- read.csv(datafile_name)
 ProjectData <- data.matrix(ProjectData) 
 ProjectData_INITIAL <- ProjectData
@@ -118,11 +119,11 @@ factor_selectionciterion = "eigenvalue"
 
 # Please ENTER the desired minumum variance explained 
 # (Only used in case "variance" is the factor selection criterion used). 
-minimum_variance_explained = 65  # between 1 and 100
+minimum_variance_explained = 75  # between 1 and 100
 
 # Please ENTER the number of factors to use 
 # (Only used in case "manual" is the factor selection criterion used).
-manual_numb_factors_used = 15
+manual_numb_factors_used = 10
 
 # Please ENTER the rotation eventually used (e.g. "none", "varimax", "quatimax", "promax", "oblimin", "simplimax", and "cluster" - see help(principal)). Default is "varimax"
 rotation_used = "varimax"
@@ -165,18 +166,21 @@ write.csv(round(thecor,2), file = "thecor.csv")
 1. Do you see any high correlations between the responses? Do they make sense? 
 2. What do these correlations imply?
 
+
+
+
+
 **Answers:**
 
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
+*There are a few correlations that stick out:
+*  3, 7 and 9 are lightly correlated: these customers view the boat as a sign of achievement, and brand may be important to them
+*  13 - 17 are all lightly correlated: these customer are interested in boating technology and knowledge
+*  20, 27 and 28 are correlated with each other: these customers view boating as their primary passion
+*  The second and third cluster have some correlation to each other: passionate boaters are interested in technology
+*  2, 8, 10 and 11 are all uncorrelated with the other answers: these boaters don't have broad interest in boating lifestyle and are 
+    most swayed by cost or expert opinion
+
+
 
 
 ## Step 4: Choose number of factors
@@ -226,16 +230,13 @@ iplot.df(melt(df, id="components"))
 
 **Answers**
 
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
+* The table shows us a breakdown of the new combined responses, as well as how well each new component captures the variation in the data
+* An Eigenvalue of greater than 1 means that the component captures more variance than each original variable
+* The chart takes the same data and represents it visually
+* The plot has this shape because we ordered the components in descending order. The plotted line cannot be increasing.
+* We prefer to see a large, sharp decrease followed by a flat tail. This would give us the ability to capture the most variation
+    with the least number of variables
+
 
 ## Step 5: Interpret the factors
 
@@ -288,13 +289,15 @@ write.csv(Rotated_Factors_thres, file = "Rotated_Factors_thres.csv")
 
 **Answers**
 
+* The first factor corresponds to a segment that considers themselves knowledgeable, and who prides themselves on buying the best of the best (Showy)
+    They are motivated by others' perceptions and need to buy a well regarded boat
+* The second factor explains a segment that uses boating as an escape, an adventure and who boat for the joy of it. They are more interested in the activity (Adventurers)
+    than the boat itself
+* The third factor is only interested in brand. (Status Symbols)
+* The fourth seems like a DIY boater - they like to take care of their gear (DIY)
+* The fifth is very price motivated (Budget)
 *
-*
-*
-*
-*
-*
-*
+* 
 *
 *
 *
@@ -319,12 +322,12 @@ write.csv(NEW_ProjectData, file = "FactorScores.csv")
 
 **Answers**
 
-*
-*
-*
-*
-*
-*
+* Customer 1 is a showy, status symbol chasing adventurer
+* Customer 2 is primarily showy and technology focused
+* Customer 3 much like Customer 2
+* Customer 4 is a status symbol enthusiast
+* Customer 5 is interested in technology, branding and also DIY
+* 
 *
 *
 *
